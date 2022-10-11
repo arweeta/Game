@@ -1,6 +1,33 @@
 //body: background / music?!
+body {
+    background-image: url(../images/background.jpg);
+    background-position: center;
+    background-size: fill;
+}
+
 //header
 //buttons: start, replay, home
 //box-container
+.box-container {
+    width: 256px;
+    background: lightpink;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 30px auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
 //boxes
+.box {
+    min-width: 80px;
+    min-height: 80px;
+    display: inline-block;
+    border: 2px solid lightpink;
+    background: white;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+}
+
 //highlight empty boxes when hovering (hover)
