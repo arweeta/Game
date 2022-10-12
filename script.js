@@ -1,10 +1,32 @@
 //DOM elements (querySelectors)
+const boxes = document.querySelectorAll('.box');
 
 //home page with start game button
 
+
 //noughts and crosses and toggle between taking turns
+let icon = 'X'
+const toggle = () => {
+    if ( icon === 'X' ) {
+        icon = 'O';
+    }    
+    else {
+        icon = 'X';
+    }    
+}
+
 
 //function to take a turn
+boxes.forEach( (e) => { e.addEventListener('click', 
+    () => {
+        if ( !e.innerHTML ) {
+            e.innerHTML = `<h1>${icon}</h1>`;
+            toggle();
+        }
+    });
+});
+
+
 //if box empty & selected write noughts or crosses
 //once turn taken, toggle to other player
 //check for winner
