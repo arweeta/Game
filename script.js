@@ -1,5 +1,6 @@
 //DOM elements (querySelectors)
 const boxes = document.querySelectorAll('.box');
+const reset = document.querySelector('button');
 
 //home page with start game button
 
@@ -34,6 +35,15 @@ boxes.forEach( (e) => { e.addEventListener('click',
 //function to reset the board
 //clear all boxes
 //display winner function
+const resetBoard = () => {
+    boxes.forEach(
+        (e) => {
+            e.innerHTML = '';
+        }
+    )
+}
+// Event Listener
+reset.addEventListener('click', resetBoard)
 
 //function to check for winner/loser or draw
 //using arrays to check for winner
