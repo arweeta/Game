@@ -1,5 +1,6 @@
 const boxes = document.querySelectorAll('.box');
 const reset = document.querySelector('button');
+const winner = document.querySelector('.display')
 
 let icon = 'X'
 const toggle = () => {
@@ -59,6 +60,6 @@ const checkForWinner = () => {
 }
 
 const declareWinner = (win) => {
-    document.write = (`<h2>${win} wins!<h2>`);
+    winner.innerHTML = (`<h2>${win} wins!<h2>`);
 }
 console.log(declareWinner)
